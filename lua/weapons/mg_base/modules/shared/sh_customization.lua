@@ -1006,6 +1006,10 @@ function SWEP:DrawLaser(model)
         end
     end
 
+    if (self:GetAimDelta() < 0.5 && !laserSettings.EnableHip) then
+        color = Color(0, 0, 0, 0)
+    end
+
     render.SetMaterial(laserSettings.BeamMaterial)
     render.DrawBeam(att.Pos, att.Pos + att.Ang:Forward() * (beamDelta * laserSettings.BeamSize), laserSettings.BeamWidth * math.random(0.5, 1), 0, 0.95, color)
 
@@ -1029,7 +1033,7 @@ function SWEP:DrawLaser(model)
     local sens = Lerp(self:GetAimDelta(), 50, 150)
     self:SafeLerpVector(math.min(sens * FrameTime(), 1), laserModel.mw_laserTrailPos, pos)
 
-    if (self:GetAimDelta() < 0.5 || (bCanDrawLaser && self.LaserAimPos != nil && self.LaserAimAngles != nil)) then
+    if ((self:GetAimDelta() < 0.5 && laserSettings.EnableHip) || (bCanDrawLaser && self.LaserAimPos != nil && self.LaserAimAngles != nil) || (self:GetAimDelta() >= 0.5 && laserSettings.EnableADS)) then
         render.SetMaterial(laserSettings.DotMaterial)
         render.DrawQuadEasy(pos, normal, laserSettings.DotSize, laserSettings.DotSize, color, math.random(179, 180))
         render.DrawBeam(laserModel.mw_laserTrailPos, pos, laserSettings.DotSize * 0.8, 0, 0.5, color)
