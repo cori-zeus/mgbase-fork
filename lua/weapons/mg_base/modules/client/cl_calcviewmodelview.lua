@@ -131,7 +131,7 @@ function SWEP:CalcViewModel(ViewModel, EyePos, EyeAng)
     vmOffset:Add(EyeAng:Right() * GetConVar("mgbase_fx_vm_pos_x"):GetFloat())
     vmOffset:Add(EyeAng:Forward() * GetConVar("mgbase_fx_vm_pos_y"):GetFloat())
     vmOffset:Add(EyeAng:Up() * GetConVar("mgbase_fx_vm_pos_z"):GetFloat())
-    if self:GetAimDelta() and !GetConVar("mgbase_fx_vm_pos_ads_affected"):GetBool() then
+    if self:GetAimDelta() && !GetConVar("mgbase_fx_vm_pos_ads_affected"):GetBool() then
         vmOffset:Mul(1 - self:GetAimDelta())
     end
     EyePos:Add(vmOffset)

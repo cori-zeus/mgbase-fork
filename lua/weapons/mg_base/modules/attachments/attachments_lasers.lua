@@ -10,7 +10,9 @@ MW_ATT_KEYS["attachment_vm_laser01"] = {
         BeamSize = 15,
         BeamWidth = 1,
         DotSize = 5,
-        Color = Color(255, 0, 0, 255),
+        EnableHip = false,
+        EnableADS = true,
+        Color = Color(0, 255, 0, 255),
         Attachment = "laser"
     },
     Flashlight = {
@@ -36,7 +38,9 @@ MW_ATT_KEYS["attachment_vm_laser_cylinder01"] = {
         BeamSize = 15,
         BeamWidth = 1,
         DotSize = 5,
-        Color = Color(255, 0, 0, 255),
+        EnableHip = false,
+        EnableADS = true,
+        Color = Color(0, 255, 0, 255),
         Attachment = "laser"
     },
     Flashlight = {
@@ -62,7 +66,9 @@ MW_ATT_KEYS["attachment_vm_laser02"] = {
         BeamSize = 15,
         BeamWidth = 1,
         DotSize = 5,
-        Color = Color(0, 255, 255, 255),
+        EnableHip = true,
+        EnableADS = false,
+        Color = Color(0, 255, 0, 255),
         Attachment = "laser"
     },
     Stats = function(self)
@@ -82,7 +88,9 @@ MW_ATT_KEYS["attachment_vm_laser_cylinder02"] = {
         BeamSize = 15,
         BeamWidth = 1,
         DotSize = 5,
-        Color = Color(0, 255, 255, 255),
+        EnableHip = true,
+        EnableADS = false,
+        Color = Color(0, 255, 0, 255),
         Attachment = "laser"
     },
     Stats = function(self)
@@ -102,7 +110,9 @@ MW_ATT_KEYS["attachment_vm_laser03"] = {
         BeamSize = 15,
         BeamWidth = 0.5,
         DotSize = 5,
-        Color = Color(0, 255, 0, 255),
+        EnableHip = true,
+        EnableADS = false,
+        Color = Color(255, 0, 0, 255),
         Attachment = "laser"
     },
     Stats = function(self)
@@ -122,7 +132,9 @@ MW_ATT_KEYS["attachment_vm_laser_cylinder03"] = {
         BeamSize = 15,
         BeamWidth = 0.5,
         DotSize = 5,
-        Color = Color(0, 255, 0, 255),
+        EnableHip = true,
+        EnableADS = false,
+        Color = Color(255, 0, 0, 255),
         Attachment = "laser"
     },
     Stats = function(self)
