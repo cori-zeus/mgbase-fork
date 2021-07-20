@@ -224,7 +224,7 @@ function SWEP:RenderReticles()
     render.SetStencilCompareFunction(STENCIL_EQUAL)
 
     local att = sight:GetAttachment(sight:LookupAttachment(ret.Attachment))
-    local pos, ang = att.Pos, att.Ang
+    local pos, ang = EyePos(), EyeAngles()
     ang:RotateAroundAxis(ang:Up(), 270)
     ang:RotateAroundAxis(ang:Right(), 0)
     ang:RotateAroundAxis(ang:Forward(), 90)
@@ -233,7 +233,7 @@ function SWEP:RenderReticles()
     cam.Start3D2D(pos + ang:Up() * -100 --[[+ ang:Right() * -6.4 + ang:Forward() * -1.31]], ang, 0.01) --wtf happened here? it didnt need the offsets before...
         surface.SetMaterial(ret.Material)
 
-        local size = ret.Size 
+        local size = ret.Size
         local color = ret.Color
 
         --surface.SetDrawColor(0, 0, 0, 255)
