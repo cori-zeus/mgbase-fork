@@ -1023,8 +1023,8 @@ function SWEP:DrawLaser(model)
 
     local pos = tr.HitPos * 1
 
-    if (bCanDrawLaser) then
-        self:SafeLerpVector(self:GetAimDelta() * 0.8, pos, EyePos() + EyeAngles():Forward() * 300)
+    if (bCanDrawLaser || (laserSettings.EnableADS && self:GetAimDelta() >= 0)) then
+        self:SafeLerpVector(self:GetAimDelta() * 0.9, pos, EyePos() + EyeAngles():Forward() * 300)
     end
 
     local normal = tr.HitNormal * 1

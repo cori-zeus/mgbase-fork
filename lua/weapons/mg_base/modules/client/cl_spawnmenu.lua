@@ -148,8 +148,8 @@ hook.Add("PopulateToolMenu", "CustomMenuSettings", function()
                 panel:NumSlider("Recoil Multiplier", "mgbase_sv_recoil", 0, 5, 1)
                 panel:ControlHelp("Change recoil intensity.")
 
-                panel:NumSlider("Accuracy Multiplier", "mgbase_sv_accuracy", 0.1, 5, 1)
-                panel:ControlHelp("Change accuracy intensity.")
+                panel:NumSlider("Bullet Spread Multiplier", "mgbase_sv_spread", 0, 10, 1)
+                panel:ControlHelp("Change bullet spread intensity.")
 
                 panel:CheckBox("Toggle Customization", "mgbase_sv_customization")
                 panel:ControlHelp("Allow gun customization.")

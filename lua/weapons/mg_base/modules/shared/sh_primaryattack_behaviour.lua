@@ -249,7 +249,7 @@ function SWEP:PrimaryAttack()
     end
 
     --cone
-    self:SetCone(math.min(self:GetCone() + self.Cone.Increase * Lerp(self:GetAimDelta(), 1, self.Cone.AdsMultiplier / GetConVar("mgbase_sv_accuracy"):GetFloat()), self.Cone.Max / GetConVar("mgbase_sv_accuracy"):GetFloat()))
+    self:SetCone(math.min(self:GetCone() + self.Cone.Increase * Lerp(self:GetAimDelta(), 1, self.Cone.AdsMultiplier * GetConVar("mgbase_sv_spread"):GetFloat()), self.Cone.Max * GetConVar("mgbase_sv_spread"):GetFloat()))
     
     if (CLIENT && IsFirstTimePredicted()) then
         self.Camera.Shake = self.Recoil.Shake --* Lerp(self:GetAimDelta(), 1, self.Recoil.AdsMultiplier)
