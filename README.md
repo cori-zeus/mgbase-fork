@@ -9,3 +9,7 @@ As a result of many files being excluded, anyone who wishes to use the fork will
 
 ## MULTIPLAYER
 If you are the host and using modified files, then I think it will work just fine. If you are connecting to another host that doesn't use modified files, then you probably will not see any of my changes. 
+
+---
+
+I hereby permit the developers of the original addon to use my code in their project as they see fit. I'd use the GPL v3 license, but that's not really my call.
