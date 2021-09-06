@@ -1,15 +1,11 @@
 # MODERN WARFARE SWEPS
-This is **NOT** the official git repository, do not misconstrue this as such. This is simply an unofficial "fork" of the original addon.
+This is **NOT** the official git repository. This is an unofficial fork of the original addon.
 
 ## WHERE ARE THE ASSETS?
-While I have made the scripts available, I chose not to include assets as they (obviously) almost universally belong to Infinity Ward and Activision. If any assets ever need to be modified, the modified version will be available in the repository.
+I'm releasing the scripts, but releasing the assets would likely get me a cease and desist order.
 
 ## HOW TO USE
-As a result of many files being excluded, anyone who wishes to use the fork will have to also have the [original Workshop addon](https://steamcommunity.com/sharedfiles/filedetails/?id=2459720887) installed. After having downloaded the addon, clone the repository to `GarrysMod/garrysmod/addons`. The cloned scripts will override the originals.
+As a result of many files being excluded, anyone who wants to use the fork will need to install the [original Workshop addon](https://steamcommunity.com/sharedfiles/filedetails/?id=2459720887) installed. After downloading the addon, clone the repository to `GarrysMod/garrysmod/addons`. The cloned files will override the originals.
 
 ## MULTIPLAYER
-If you are the host and using modified files, then I think it will work just fine. If you are connecting to another host that doesn't use modified files, then you probably will not see any of my changes. 
-
----
-
-I hereby permit the developers of the original addon to use my code in their project as they see fit.
+If you are the host and using modified files, then I think it will work mostly fine. If you are connecting to another host that doesn't use modified files, then you probably won't see any of my changes. 
