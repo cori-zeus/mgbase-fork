@@ -111,6 +111,9 @@ hook.Add("PopulateToolMenu", "CustomMenuSettings", function()
                 panel:CheckBox("Attachments Saving", "mgbase_saveatts")
                 panel:ControlHelp("Toggle whether or not to keep attachments after death.")
 
+                panel:NumSlider("ADS Sensitivity Mode", "mgbase_scopesens_mode", 0, 2, 0)
+                panel:ControlHelp("Changes how ADS sensitivity is applied. 0 = unmodified, 1 = based on optic FOV, 2 = based on camera FOV.")
+
                 panel:NumSlider("Scope ADS Sensitivity", "mgbase_scopesens", 0.01, 10, 2)
                 panel:ControlHelp("Set the aim sensitivity when using scopes.")
 	end)

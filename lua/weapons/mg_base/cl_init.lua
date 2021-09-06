@@ -11,6 +11,7 @@ CreateClientConVar("mgbase_gloves_skin", "0", true, true, "Change first person a
 CreateClientConVar("mgbase_toggleaim", "0", true, true, "Hold to aim.", 0, 1)
 CreateClientConVar("mgbase_autoreload", "1", true, true, "Toggle auto reload.", 0, 1)
 CreateClientConVar("mgbase_scopesens", "1", true, true, "Scope aim sensitivity.", 0.01, 10)
+CreateClientConVar("mgbase_scopesens_mode", "1", true, true, "Changes how sensitivity is modified while ADSing. 0 = unmodified, 1 = based on optic FOV, 2 = based on camera FOV.", 0, 2)
 CreateClientConVar("mgbase_saveatts", "1", true, true, "Toggle attachments saving.", 0, 1)
 CreateClientConVar("mgbase_fx_vmblur_hip", "1", true, true, "Toggle viewmodel blur when firing from the hip.", 0, 1)
 CreateClientConVar("mgbase_fx_vmblur", "1", true, true, "Toggle viewmodel blur when aiming.", 0, 1)

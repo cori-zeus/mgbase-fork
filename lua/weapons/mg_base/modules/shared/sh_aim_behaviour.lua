@@ -196,9 +196,15 @@ end
 
 function SWEP:AdjustMouseSensitivity()
     local mul = self.Zoom.FovMultiplier
+    local fov = GetConVar("fov_desired"):GetFloat()
+    local cvar = GetConVar("mgbase_scopesens_mode"):GetInt()
+
+    if cvar > 0 then
+        fov = (self:GetCurrentOptic() and cvar == 1) and self:GetCurrentOptic().FOV or fov * self.Zoom.FovMultiplier
+    end
 
     if (self:GetCurrentOptic() != nil && self:GetAimMode() <= 0) then
-        mul = mul / (self:GetCurrentOptic().FOV * 0.95) * GetConVar("mgbase_scopesens"):GetFloat()
+        mul = (fov / GetConVar("fov_desired"):GetFloat()) * GetConVar("mgbase_scopesens"):GetFloat()
     end
 
 	return Lerp(self:GetAimDelta(), 1, mul)
