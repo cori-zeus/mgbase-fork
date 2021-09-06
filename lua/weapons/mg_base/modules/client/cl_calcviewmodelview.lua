@@ -290,7 +290,7 @@ function SWEP:CalcCrouchOffset()
 end
 
 function SWEP:CalcRecoil()
-    local aimDelta = self:SafeLerp(self:GetAimDelta(), 0.75, 0.2)
+    local aimDelta = self:SafeLerp(self:GetAimDelta(), 0.75, 0.0)
 
     if (self.Primary.Automatic) then
         local speed = 25
