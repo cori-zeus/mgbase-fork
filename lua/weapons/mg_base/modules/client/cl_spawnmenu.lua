@@ -139,16 +139,16 @@ hook.Add("PopulateToolMenu", "CustomMenuSettings", function()
                 panel:CheckBox("High Latency Hitreg Method", "mgbase_sv_hitreg")
                 panel:ControlHelp("Do not turn this on for PvP-focused servers!")
 
-                panel:NumSlider("PvP Damage Multiplier", "mgbase_sv_pvpdamage", 0, 5, 1)
+                panel:NumSlider("PvP Damage Multiplier", "mgbase_sv_pvpdamage", 0, 100, 1)
                 panel:ControlHelp("Change damage towards players.")
 
-                panel:NumSlider("PvE Damage Multiplier", "mgbase_sv_pvedamage", 0, 5, 1)
+                panel:NumSlider("PvE Damage Multiplier", "mgbase_sv_pvedamage", 0, 100, 1)
                 panel:ControlHelp("Change damage towards NPCs and Nextbots.")
 
-                panel:NumSlider("Recoil Multiplier", "mgbase_sv_recoil", 0, 5, 1)
+                panel:NumSlider("Recoil Multiplier", "mgbase_sv_recoil", 0, 100, 1)
                 panel:ControlHelp("Change recoil intensity.")
 
-                panel:NumSlider("Bullet Spread Multiplier", "mgbase_sv_spread", 0, 10, 1)
+                panel:NumSlider("Bullet Spread Multiplier", "mgbase_sv_spread", 0, 100, 1)
                 panel:ControlHelp("Change bullet spread intensity.")
 
                 panel:CheckBox("Enable ADS Speed Penalty", "mgbase_sv_ads_penalty")
