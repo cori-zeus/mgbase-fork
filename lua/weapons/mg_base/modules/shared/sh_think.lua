@@ -123,14 +123,14 @@ function SWEP:Think()
         self.MouseY = math.Clamp(self.MouseY + cmd:GetMouseY() * 0.05, -15, 15)
     end]] --possible free view
 
-    --[[if (self:GetOwner():IsOnGround() && self:GetAimDelta() > 0) then
+    if (GetConVar("mgbase_sv_ads_penalty"):GetBool() && self:GetOwner():IsOnGround() && self:GetAimDelta() > 0) then
         local dir = -self:GetOwner():GetVelocity()
         local len = dir:Length() * self:SafeLerp(self:GetAimDelta(), 1, 10)
         dir:Normalize()
         dir:Mul(len)
 
         self:GetOwner():SetVelocity(dir * FrameTime())
-    end]] --slow down when aiming, kinda works but not predicted
+    end --slow down when aiming, kinda works but not predicted
 
     --trigger
     if (CLIENT && game.SinglePlayer()) then

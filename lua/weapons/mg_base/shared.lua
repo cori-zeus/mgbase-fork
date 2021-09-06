@@ -119,6 +119,7 @@ CreateConVar("mgbase_sv_pvedamage", "1", FCVAR_ARCHIVE + FCVAR_REPLICATED, "PvE 
 CreateConVar("mgbase_sv_recoil", "1", FCVAR_ARCHIVE + FCVAR_REPLICATED, "Recoil multiplier", 0, 10)
 CreateConVar("mgbase_sv_spread", "1", FCVAR_ARCHIVE + FCVAR_REPLICATED, "Bullet spread multiplier", 0, 10)
 CreateConVar("mgbase_sv_customization", "1", FCVAR_ARCHIVE + FCVAR_NOTIFY + FCVAR_REPLICATED, "Allow gun customization.", 0, 1)
+CreateConVar("mgbase_sv_ads_penalty", "0", FCVAR_ARCHIVE + FCVAR_NOTIFY + FCVAR_REPLICATED, "Speed penalty while ADSing", 0, 1)
 
 function SWEP:RecreateClientsideModels(bAtts)
     if (!IsValid(self.m_ViewModel)) then
