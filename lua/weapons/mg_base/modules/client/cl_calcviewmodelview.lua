@@ -113,9 +113,9 @@ function SWEP:CalcViewModel(ViewModel, EyePos, EyeAng)
     -- end of idle
 
     --sway
-    self:VectorAddAndMul(EyePos, up, (vars.Sway.PosY.Lerp * 0.25) * self:SafeLerp(vars.LerpAimDelta, 1, 0.25))
-    self:VectorAddAndMul(EyePos, forward, (vars.Sway.PosForward.Lerp * 0.1) * self:SafeLerp(vars.LerpAimDelta, 1, 0.25))
-    self:VectorAddAndMul(EyePos, right, (vars.Sway.PosX.Lerp * 0.25) * self:SafeLerp(vars.LerpAimDelta, 1, 0.25))
+    self:VectorAddAndMul(EyePos, up, (vars.Sway.PosY.Lerp * 0.25) * self:SafeLerp(vars.LerpAimDelta, 1, 0.1))
+    self:VectorAddAndMul(EyePos, forward, (vars.Sway.PosForward.Lerp * 0.1) * self:SafeLerp(vars.LerpAimDelta, 1, 0.1))
+    self:VectorAddAndMul(EyePos, right, (vars.Sway.PosX.Lerp * 0.25) * self:SafeLerp(vars.LerpAimDelta, 1, 0.1))
     --end sway
 
     --offsets
@@ -126,15 +126,6 @@ function SWEP:CalcViewModel(ViewModel, EyePos, EyeAng)
 
     local idleOffset = self:CalcOffset(self.ViewModelOffsets.Idle.Pos, EyeAng * 1)
     idleOffset:Mul(self:SafeLerp(self:GetAimDelta(), 1, 0))
-
-    local vmOffset = Vector()
-    vmOffset:Add(EyeAng:Right() * GetConVar("mgbase_fx_vm_pos_x"):GetFloat())
-    vmOffset:Add(EyeAng:Forward() * GetConVar("mgbase_fx_vm_pos_y"):GetFloat())
-    vmOffset:Add(EyeAng:Up() * GetConVar("mgbase_fx_vm_pos_z"):GetFloat())
-    if self:GetAimDelta() && !GetConVar("mgbase_fx_vm_pos_ads_affected"):GetBool() then
-        vmOffset:Mul(1 - self:GetAimDelta())
-    end
-    EyePos:Add(vmOffset)
 
     EyePos:Add(aimOffset)
     EyePos:Add(idleOffset)
@@ -157,12 +148,12 @@ function SWEP:CalcViewModel(ViewModel, EyePos, EyeAng)
 
     CalcVMViewHookBypass = true
     EyePos, EyeAng = hook.Run("CalcViewModelView", self, self.m_ViewModel, self.m_ViewModel:GetPos(), self.m_ViewModel:GetAngles(), EyePos * 1, EyeAng * 1)
-    CalcVMViewHookBypass = false
+    CalcVMViewHookBypass = false 
 
     self.m_ViewModel:SetPos(EyePos)
     self.m_ViewModel:SetAngles(EyeAng)
 
-    self.ViewModelFOV = self:SafeLerp(self.Camera.Fov, self.m_OriginalViewModelFOV, self.m_OriginalViewModelFOV * self.Zoom.ViewModelFovMultiplier) * math.max(GetConVar("mgbase_fx_vm_fov"):GetFloat(), 0.1)
+    self.ViewModelFOV = self:SafeLerp(self.Camera.Fov, self.m_OriginalViewModelFOV, self.m_OriginalViewModelFOV * self.Zoom.ViewModelFovMultiplier) * math.max(GetConVar("mgbase_fx_vmfov"):GetFloat(), 0.1)
 end
 
 function SWEP:CalcViewModelJump()

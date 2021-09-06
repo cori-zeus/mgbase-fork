@@ -10,9 +10,7 @@ MW_ATT_KEYS["attachment_vm_laser_pstl"] = {
         BeamSize = 15,
         BeamWidth = 1,
         DotSize = 5,
-        EnableHip = false,
-        EnableADS = true,
-        Color = Color(0, 255, 0, 255),
+        Color = Color(255, 0, 0, 255),
         Attachment = "laser"
     },
     Flashlight = {
@@ -38,9 +36,7 @@ MW_ATT_KEYS["attachment_vm_laser_pstl03"] = {
         BeamSize = 15,
         BeamWidth = 1,
         DotSize = 5,
-        EnableHip = true,
-        EnableADS = false,
-        Color = Color(0, 255, 0, 255),
+        Color = Color(0, 255, 255, 255),
         Attachment = "laser"
     },
     Stats = function(self)
@@ -60,9 +56,7 @@ MW_ATT_KEYS["attachment_vm_laser_pstl04"] = {
         BeamSize = 15,
         BeamWidth = 0.5,
         DotSize = 5,
-        EnableHip = true,
-        EnableADS = false,
-        Color = Color(255, 0, 0, 255),
+        Color = Color(0, 255, 0, 255),
         Attachment = "laser"
     },
     Stats = function(self)
@@ -82,8 +76,6 @@ MW_ATT_KEYS["attachment_vm_laser_pstl_shoothouse"] = {
         BeamSize = 15,
         BeamWidth = 1,
         DotSize = 2,
-        EnableHip = true,
-        EnableADS = false,
         Color = Color(255, 0, 255, 255),
         Attachment = "laser"
     },

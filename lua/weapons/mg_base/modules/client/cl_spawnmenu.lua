@@ -20,20 +20,8 @@ hook.Add("PopulateToolMenu", "CustomMenuSettings", function()
                 panel:NumSlider("Gloves Skin", "mgbase_gloves_skin", 0, MGBASE_GLOVES_SKIN_COUNT, 0)
                 panel:ControlHelp("Change appearance of gloves.")
 
-                panel:NumSlider("FOV", "mgbase_fx_vm_fov", 0.1, 2, 2)
+                panel:NumSlider("FOV", "mgbase_fx_vmfov", 0.1, 2, 2)
                 panel:ControlHelp("Change view model FOV.")
-
-                panel:NumSlider("X Offset", "mgbase_fx_vm_pos_x", -8, 8)
-                panel:ControlHelp("Change viewmodel X offset.")
-
-                panel:NumSlider("Y Offset", "mgbase_fx_vm_pos_y", -8, 8)
-                panel:ControlHelp("Change viewmodel Y offset.")
-
-                panel:NumSlider("Z Offset", "mgbase_fx_vm_pos_z", -8, 8)
-                panel:ControlHelp("Change viewmodel Z offset.")
-
-                panel:CheckBox("Offset ADS", "mgbase_fx_vm_pos_ads_affected")
-                panel:ControlHelp("Toggle viewmodel offset taking effect whilst aiming down sights.")
         end)
         
         spawnmenu.AddToolMenuOption("Options", "mw_options", "mw_performance", "Performance", "", "", function(panel)
@@ -148,8 +136,8 @@ hook.Add("PopulateToolMenu", "CustomMenuSettings", function()
                 panel:NumSlider("Recoil Multiplier", "mgbase_sv_recoil", 0, 5, 1)
                 panel:ControlHelp("Change recoil intensity.")
 
-                panel:NumSlider("Bullet Spread Multiplier", "mgbase_sv_spread", 0, 10, 1)
-                panel:ControlHelp("Change bullet spread intensity.")
+                panel:NumSlider("Accuracy Multiplier", "mgbase_sv_accuracy", 0.1, 5, 1)
+                panel:ControlHelp("Change accuracy intensity.")
 
                 panel:CheckBox("Toggle Customization", "mgbase_sv_customization")
                 panel:ControlHelp("Allow gun customization.")

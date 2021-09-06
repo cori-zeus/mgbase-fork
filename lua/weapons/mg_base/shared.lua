@@ -16,7 +16,22 @@ local function IncludeDir(dir)
         IncludeDir(dir..v)
     end
 end
-IncludeDir("weapons/mg_base/modules/attachments")   
+IncludeDir("weapons/mg_base/modules/attachments")
+
+CHAN_ATMO = 137
+CHAN_REFLECTION = 138
+CHAN_CASINGS = 139
+CHAN_TRIGGER = 140
+CHAN_MINIGUNFIRE = 141
+CHAN_MAGAZINEDROP = 142
+CHAN_WPNFOLEY = 143
+
+--define your own down here starting from 140:
+--e.g: 
+-- CHAN_JAKE = 140
+-- CHAN_ALESSIO = 141
+
+IncludeDir("weapons/mg_base/modules/sounds")
 
 SWEP.Category = "MG"
 SWEP.Spawnable = false
@@ -73,11 +88,24 @@ include("modules/client/cl_customizemenu.lua")
 include("modules/reverb/mw_reverb.lua")
 include("modules/reverb/mw_reverbimpl.lua") 
 --sounds
-include("modules/sounds/mw_sounds_channels.lua")
+--[[include("modules/sounds/mw_sounds_channels.lua")
 include("modules/sounds/mw_sounds_general.lua")
+include("modules/sounds/mw_sounds_ar_akilo47.lua")
+include("modules/sounds/mw_sounds_ar_asierra12.lua")
+include("modules/sounds/mw_sounds_ar_anovember94.lua")
+include("modules/sounds/mw_sounds_ar_falima.lua")
+include("modules/sounds/mw_sounds_ar_falpha.lua")
+include("modules/sounds/mw_sounds_ar_galima.lua")
+include("modules/sounds/mw_sounds_ar_g3a3.lua")
+include("modules/sounds/mw_sounds_ar_kilo433.lua")
+include("modules/sounds/mw_sounds_ar_mcharlie.lua")
+include("modules/sounds/mw_sounds_ar_mike4.lua")
+include("modules/sounds/mw_sounds_ar_scharlie.lua")
+include("modules/sounds/mw_sounds_ar_sierra552.lua")
+include("modules/sounds/mw_sounds_ar_tango21.lua")
+include("modules/sounds/mw_sounds_ar_valpha.lua")
 include("modules/sounds/mw_sounds_weapons.lua")
-include("modules/sounds/mw_sounds_special.lua")
-include("modules/sounds/mw_sounds_assault_rifles.lua")
+include("modules/sounds/mw_sounds_special.lua")]]
 
 --particles:
 game.AddParticles("particles/ac_mw_handguns.pcf")
@@ -88,8 +116,8 @@ game.AddParticles("particles/ac_mw_handguns.pcf")
 CreateConVar("mgbase_sv_hitreg", "0", FCVAR_ARCHIVE + FCVAR_NOTIFY + FCVAR_REPLICATED, "Switch hitreg type.", 0, 1)
 CreateConVar("mgbase_sv_pvpdamage", "1", FCVAR_ARCHIVE + FCVAR_REPLICATED, "PvP damage multiplier", 0, 5)
 CreateConVar("mgbase_sv_pvedamage", "1", FCVAR_ARCHIVE + FCVAR_REPLICATED, "PvE damage multiplier", 0, 5)
-CreateConVar("mgbase_sv_recoil", "1", FCVAR_ARCHIVE + FCVAR_REPLICATED, "Recoil multiplier", 0, 10)
-CreateConVar("mgbase_sv_spread", "1", FCVAR_ARCHIVE + FCVAR_REPLICATED, "Bullet spread multiplier", 0, 10)
+CreateConVar("mgbase_sv_recoil", "1", FCVAR_ARCHIVE + FCVAR_REPLICATED, "Recoil multiplier", 0, 5)
+CreateConVar("mgbase_sv_accuracy", "1", FCVAR_ARCHIVE + FCVAR_REPLICATED, "Accuracy multiplier", 0.01, 5)
 CreateConVar("mgbase_sv_customization", "1", FCVAR_ARCHIVE + FCVAR_NOTIFY + FCVAR_REPLICATED, "Allow gun customization.", 0, 1)
 
 function SWEP:RecreateClientsideModels(bAtts)
@@ -298,6 +326,7 @@ function SWEP:Deploy(fromFallback)
         end
     else
         if (game.SinglePlayer()) then
+            --self:CallOnClient("BuildSavedAtts") doesnt work on first draw
             timer.Simple(0.1, function()
                 if (!IsValid(self)) then
                     return

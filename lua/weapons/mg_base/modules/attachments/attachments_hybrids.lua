@@ -7,7 +7,7 @@ MW_ATT_KEYS["attachment_vm_hybrid_west"] = {
         LensHideMaterial = Material("viper/MW/attachments/attachment_vm_hybrid_west_lens_scope.vmt"),
         LensBodygroup = "lens",
         FOV = 7, 
-        ParallaxSize = 250, --a value of zero means 1:1 size with the end of the optic
+        ParallaxSize = 600, --a value of zero means 1:1 size with the end of the optic
         Thermal = false
     },
     Reticle = {
@@ -27,7 +27,7 @@ MW_ATT_KEYS["attachment_vm_hybrid_west"] = {
         self.Animations.Ads_In.Fps = self.Animations.Ads_In.Fps * 0.86
         self.Animations.Ads_Out.Fps = self.Animations.Ads_Out.Fps * 0.81
         self.Zoom.ViewModelFovMultiplier = 0.95
-        self.Zoom.FovMultiplier = 0.9
+        self.Zoom.FovMultiplier = 0.8
     end
 }
 
@@ -39,7 +39,7 @@ MW_ATT_KEYS["attachment_vm_hybrid_west02"] = {
         LensHideMaterial = Material("viper/MW/attachments/attachment_vm_hybrid_west02_magnifier_lens.vmt"),
         LensBodygroup = "lens",
         FOV = 7, 
-        ParallaxSize = 250, --a value of zero means 1:1 size with the end of the optic
+        ParallaxSize = 600, --a value of zero means 1:1 size with the end of the optic
         Thermal = false
     },
     Reticle = {
@@ -61,7 +61,41 @@ MW_ATT_KEYS["attachment_vm_hybrid_west02"] = {
         self.Animations.Ads_In.Fps = self.Animations.Ads_In.Fps * 0.94
         self.Animations.Ads_Out.Fps = self.Animations.Ads_Out.Fps * 0.87
         self.Zoom.ViewModelFovMultiplier = 0.95
-        self.Zoom.FovMultiplier = 0.9
+        self.Zoom.FovMultiplier = 0.85
+    end
+}
+
+MW_ATT_KEYS["attachment_vm_hybrid_west02_thermal"] = {
+    Name = "4.0x Flip Thermal",
+    Model = Model("models/viper/mw/attachments/attachment_vm_hybrid_west02.mdl"),
+    Icon = Material("viper/mw/attachments/icons/hybrid/icon_attachment_hybrid_west02_lw.vmt"),
+    Optic = {
+        LensHideMaterial = Material("viper/MW/attachments/attachment_vm_hybrid_west02_magnifier_lens.vmt"),
+        LensBodygroup = "lens",
+        FOV = 7, 
+        ParallaxSize = 600, --a value of zero means 1:1 size with the end of the optic
+        Thermal = true
+    },
+    Reticle = {
+        Material = Material("viper/mw/reticles/reticle_acog_default3.vmt"),
+        Size = 600,
+        Color = Color(255, 255, 255, 255),
+        Attachment = "reticle"
+    },
+    ReticleHybrid = {
+        Material = Material("viper/mw/reticles/reticle_holo_default.vmt"),
+        Size = 700,
+        Color = Color(255, 255, 255, 255),
+        OnAnimation = "HybridOn",
+        OffAnimation = "HybridOff",
+        Attachment = "reticle2"
+    },
+    Stats = function(self)
+        self.Bullet.EffectiveRange = self.Bullet.EffectiveRange * 1.47
+        self.Animations.Ads_In.Fps = self.Animations.Ads_In.Fps * 0.94
+        self.Animations.Ads_Out.Fps = self.Animations.Ads_Out.Fps * 0.87
+        self.Zoom.ViewModelFovMultiplier = 0.95
+        self.Zoom.FovMultiplier = 0.85
     end
 }
 
@@ -93,7 +127,7 @@ MW_ATT_KEYS["attachment_vm_hybrid_west03"] = {
         self.Animations.Ads_In.Fps = self.Animations.Ads_In.Fps * 0.87
         self.Animations.Ads_Out.Fps = self.Animations.Ads_Out.Fps * 0.78
         self.Zoom.ViewModelFovMultiplier = 0.95
-        self.Zoom.FovMultiplier = 0.9
+        self.Zoom.FovMultiplier = 0.85
     end
 }
 
@@ -106,7 +140,7 @@ MW_ATT_KEYS["attachment_vm_thermal_hybrid"] = {
         LensHideMaterial = Material("viper/MW/attachments/attachment_vm_thermal_east_lens.vmt"),
         LensBodygroup = "lens",
         FOV = 7, 
-        ParallaxSize = 250, --a value of zero means 1:1 size with the end of the optic
+        ParallaxSize = 600, --a value of zero means 1:1 size with the end of the optic
         Thermal = true
     },
     Reticle = {
@@ -126,6 +160,6 @@ MW_ATT_KEYS["attachment_vm_thermal_hybrid"] = {
         self.Animations.Ads_In.Fps = self.Animations.Ads_In.Fps * 0.8
         self.Animations.Ads_Out.Fps = self.Animations.Ads_Out.Fps * 0.78
         self.Zoom.ViewModelFovMultiplier = 0.95
-        self.Zoom.FovMultiplier = 0.9
+        self.Zoom.FovMultiplier = 0.85
     end
 }

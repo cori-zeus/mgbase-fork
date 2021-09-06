@@ -51,7 +51,7 @@ function SWEP:Think()
         self:SetSprayRounds(0)
 
         --cone
-        local target = Lerp(self:GetAimDelta(), self.Cone.Hip, self.Cone.Ads) * GetConVar("mgbase_sv_spread"):GetFloat()
+        local target = Lerp(self:GetAimDelta(), self.Cone.Hip, self.Cone.Ads) / GetConVar("mgbase_sv_accuracy"):GetFloat()
         self:SetCone(math.Approach(self:GetCone(), target, (1 / self.Cone.Decrease) * FrameTime()))
     end
 

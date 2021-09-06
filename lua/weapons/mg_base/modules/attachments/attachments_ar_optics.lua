@@ -22,7 +22,7 @@ MW_ATT_KEYS["attachment_vm_4x_east_tall"] = {
         self.Animations.Ads_In.Fps = self.Animations.Ads_In.Fps * 0.92
         self.Animations.Ads_Out.Fps = self.Animations.Ads_Out.Fps * 0.92
         self.Zoom.ViewModelFovMultiplier = 0.95
-        self.Zoom.FovMultiplier = 0.9
+        self.Zoom.FovMultiplier = 0.8
     end
 }
 
@@ -34,7 +34,7 @@ MW_ATT_KEYS["attachment_vm_4x_west_tall"] = {
         LensHideMaterial = Material("viper/MW/attachments/attachment_vm_4x_west_lens.vmt"),
         LensBodygroup = "lens",
         FOV = 7, 
-        ParallaxSize = 450, --a value of zero means 1:1 size with the end of the optic
+        ParallaxSize = 600, --a value of zero means 1:1 size with the end of the optic
         Thermal = false
     },
     Reticle = {
@@ -48,7 +48,7 @@ MW_ATT_KEYS["attachment_vm_4x_west_tall"] = {
         self.Animations.Ads_In.Fps = self.Animations.Ads_In.Fps * 0.92
         self.Animations.Ads_Out.Fps = self.Animations.Ads_Out.Fps * 0.92
         self.Zoom.ViewModelFovMultiplier = 0.95
-        self.Zoom.FovMultiplier = 0.9
+        self.Zoom.FovMultiplier = 0.8
     end
 }
 
@@ -60,7 +60,7 @@ MW_ATT_KEYS["attachment_vm_4x_west02_tall"] = {
         LensHideMaterial = Material("viper/MW/attachments/attachment_vm_4x_west02_lens.vmt"),
         LensBodygroup = "lens",
         FOV = 7, 
-        ParallaxSize = 250, --a value of zero means 1:1 size with the end of the optic
+        ParallaxSize = 600, --a value of zero means 1:1 size with the end of the optic
         Thermal = false
     },
     Reticle = {
@@ -74,7 +74,7 @@ MW_ATT_KEYS["attachment_vm_4x_west02_tall"] = {
         self.Animations.Ads_In.Fps = self.Animations.Ads_In.Fps * 0.94
         self.Animations.Ads_Out.Fps = self.Animations.Ads_Out.Fps * 0.94
         self.Zoom.ViewModelFovMultiplier = 0.95
-        self.Zoom.FovMultiplier = 0.9
+        self.Zoom.FovMultiplier = 0.8
     end
 }
 
@@ -86,7 +86,7 @@ MW_ATT_KEYS["attachment_vm_thermal_east_tall"] = {
         LensHideMaterial = Material("viper/MW/attachments/attachment_vm_thermal_east_lens.vmt"),
         LensBodygroup = "lens",
         FOV = 7, 
-        ParallaxSize = 250, --a value of zero means 1:1 size with the end of the optic
+        ParallaxSize = 600, --a value of zero means 1:1 size with the end of the optic
         Thermal = true
     },
     Reticle = {
@@ -100,7 +100,7 @@ MW_ATT_KEYS["attachment_vm_thermal_east_tall"] = {
         self.Animations.Ads_In.Fps = self.Animations.Ads_In.Fps * 0.95
         self.Animations.Ads_Out.Fps = self.Animations.Ads_Out.Fps * 0.95
         self.Zoom.ViewModelFovMultiplier = 0.95
-        self.Zoom.FovMultiplier = 0.9
+        self.Zoom.FovMultiplier = 0.85
     end
 }
 
@@ -112,7 +112,7 @@ MW_ATT_KEYS["attachment_vm_thermal_west_01"] = {
         LensHideMaterial = Material("viper/MW/attachments/attachment_vm_thermal_west01_lens.vmt"),
         LensBodygroup = "lens",
         FOV = 7, 
-        ParallaxSize = 250, --a value of zero means 1:1 size with the end of the optic
+        ParallaxSize = 600, --a value of zero means 1:1 size with the end of the optic
         Thermal = true
     },
     Reticle = {
@@ -126,7 +126,7 @@ MW_ATT_KEYS["attachment_vm_thermal_west_01"] = {
         self.Animations.Ads_In.Fps = self.Animations.Ads_In.Fps * 0.95
         self.Animations.Ads_Out.Fps = self.Animations.Ads_Out.Fps * 0.95
         self.Zoom.ViewModelFovMultiplier = 0.95
-        self.Zoom.FovMultiplier = 0.9
+        self.Zoom.FovMultiplier = 0.85
     end
 }
 
@@ -138,7 +138,7 @@ MW_ATT_KEYS["attachment_vm_scope_vz"] = {
         LensHideMaterial = Material("viper/MW/attachments/attachment_vm_scope_vz_lens.vmt"),
         LensBodygroup = "lens",
         FOV = 7, 
-        ParallaxSize = 250, --a value of zero means 1:1 size with the end of the optic
+        ParallaxSize = 600, --a value of zero means 1:1 size with the end of the optic
         Thermal = false
     },
     Reticle = {
@@ -152,7 +152,7 @@ MW_ATT_KEYS["attachment_vm_scope_vz"] = {
         self.Animations.Ads_In.Fps = self.Animations.Ads_In.Fps * 0.91
         self.Animations.Ads_Out.Fps = self.Animations.Ads_Out.Fps * 0.91
         self.Zoom.ViewModelFovMultiplier = 0.95
-        self.Zoom.FovMultiplier = 0.8
+        self.Zoom.FovMultiplier = 0.65
     end
 }
 
@@ -164,7 +164,7 @@ MW_ATT_KEYS["weapon_vm_scope_mike14_alt"] = {
         LensHideMaterial = Material("viper/MW/attachments/weapon_vm_sn_mike14_scope_lens.vmt"),
         LensBodygroup = "lens",
         FOV = 7, 
-        ParallaxSize = 400, --a value of zero means 1:1 size with the end of the optic
+        ParallaxSize = 600, --a value of zero means 1:1 size with the end of the optic
         Thermal = false
     },
     Reticle = {
@@ -178,6 +178,6 @@ MW_ATT_KEYS["weapon_vm_scope_mike14_alt"] = {
         self.Animations.Ads_In.Fps = self.Animations.Ads_In.Fps * 0.92
         self.Animations.Ads_Out.Fps = self.Animations.Ads_Out.Fps * 0.92
         self.Zoom.ViewModelFovMultiplier = 0.95
-        self.Zoom.FovMultiplier = 0.8
+        self.Zoom.FovMultiplier = 0.65
     end
 }
