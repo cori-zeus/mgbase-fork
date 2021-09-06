@@ -67,6 +67,10 @@ end
 function SWEP:ApplyFiremode(index)
     local seqIndex = "Idle"
 
+    if (type(index) == "string") then
+        index = tonumber(index)
+    end
+
     self:SetFiremode(index)
 
     if (game.SinglePlayer() || IsFirstTimePredicted()) then
@@ -74,7 +78,7 @@ function SWEP:ApplyFiremode(index)
     end
 
     if (game.SinglePlayer() && SERVER) then
-        self:GetOwner():SendLua("LocalPlayer():GetActiveWeapon():ApplyFiremode("..index..")")
+        self:CallOnClient("ApplyFiremode", index)
     end
 
     return self:ApplyFiremodeStats()

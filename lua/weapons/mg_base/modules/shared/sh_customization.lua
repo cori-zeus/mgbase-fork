@@ -116,7 +116,7 @@ function SWEP:Customize(fromFallback)
     end
 
     if (game.SinglePlayer() && IsValid(self:GetOwner())) then
-        self:GetOwner():SendLua("LocalPlayer():GetActiveWeapon():CustomizationMenu()")
+        self:CallOnClient("CustomizationMenu")
     end
 
     if (CLIENT && game.SinglePlayer()) then

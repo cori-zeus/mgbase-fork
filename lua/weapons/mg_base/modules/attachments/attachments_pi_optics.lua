@@ -23,8 +23,8 @@ MW_ATT_KEYS["attachment_vm_holo_east"] = {
         self.Bullet.EffectiveRange = self.Bullet.EffectiveRange * 1.15
         self.Animations.Ads_In.Fps = self.Animations.Ads_In.Fps * 0.94
         self.Animations.Ads_Out.Fps = self.Animations.Ads_Out.Fps * 0.94
-        self.Zoom.ViewModelFovMultiplier = 0.94
-        self.Zoom.FovMultiplier = 0.94
+        self.Zoom.ViewModelFovMultiplier = 0.9
+        self.Zoom.FovMultiplier = 0.85
     end
 }
 
