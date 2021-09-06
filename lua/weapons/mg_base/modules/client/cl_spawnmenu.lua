@@ -151,6 +151,9 @@ hook.Add("PopulateToolMenu", "CustomMenuSettings", function()
                 panel:NumSlider("Bullet Spread Multiplier", "mgbase_sv_spread", 0, 10, 1)
                 panel:ControlHelp("Change bullet spread intensity.")
 
+                panel:CheckBox("Enable ADS Speed Penalty", "mgbase_sv_ads_penalty")
+                panel:ControlHelp("Slows down players while aiming down sights. (buggy)")
+
                 panel:CheckBox("Toggle Customization", "mgbase_sv_customization")
                 panel:ControlHelp("Allow gun customization.")
 	end)
