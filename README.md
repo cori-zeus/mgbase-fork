@@ -12,4 +12,4 @@ If you are the host and using modified files, then I think it will work just fin
 
 ---
 
-I hereby permit the developers of the original addon to use my code in their project as they see fit. I'd use the GPL v3 license, but that's not really my call.
+I hereby permit the developers of the original addon to use my code in their project as they see fit.
