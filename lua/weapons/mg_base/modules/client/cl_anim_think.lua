@@ -66,8 +66,8 @@ function SWEP:AnimThinkModule()
     self.ViewModelVars.LerpJog = Lerp(5 * FrameTime(), self.ViewModelVars.LerpJog, jogDelta)
     self.ViewModelVars.LerpWalk = Lerp(5 * FrameTime(), self.ViewModelVars.LerpWalk, walkDelta)
 
-    self.m_ViewModel:SetPoseParameter(poseparameters.jog_loop, self.ViewModelVars.LerpJog * Lerp(lerpAimDelta, 1, 0.1))
-    self.m_ViewModel:SetPoseParameter(poseparameters.walk_loop, self.ViewModelVars.LerpWalk * Lerp(lerpAimDelta, 1, 0.2))
+    self.m_ViewModel:SetPoseParameter(poseparameters.jog_loop, self.ViewModelVars.LerpJog * Lerp(lerpAimDelta, 1, 0.02))
+    self.m_ViewModel:SetPoseParameter(poseparameters.walk_loop, self.ViewModelVars.LerpWalk * Lerp(lerpAimDelta, 1, 0.05))
 
     if (self.m_seqIndex == "Idle" && lerpAimDelta <= 0) then
         if (self.ViewModelVars.bWasJogging != self.ViewModelVars.bJogging) then
