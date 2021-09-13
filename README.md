@@ -1,6 +1,12 @@
 # MODERN WARFARE SWEPS
 This is **NOT** the official git repository. This is an unofficial fork of the original addon.
 
+# FEATURES
+* Game-accurate laser attachments
+* Viewmodel offset cvars
+* ADS mouse sensitivity options
+* Miscellaneous improvements
+
 ## WHERE ARE THE ASSETS?
 I'm releasing the scripts, but releasing the assets would likely get me a cease and desist order.
 
